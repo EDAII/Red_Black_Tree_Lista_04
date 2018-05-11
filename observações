@@ -1,1 +1,2 @@
-1)Compile o programa : g++ RedBlack_tree.cpp -o executavel -std=c++11
+1)Compile o programa : g++ -std=c++11 -I. *.cpp
+
