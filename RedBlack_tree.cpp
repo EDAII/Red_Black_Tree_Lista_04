@@ -5,6 +5,7 @@ using namespace std;
 
 void Tree::insert(int element){
   // Insere o elemento na posição correta da árvore
+  cout << "Insere elemento: "<< element << " ." << endl;
 
   void insere(Node *temp);
 
@@ -43,12 +44,15 @@ void Tree::insert(int element){
     //regras de uma arvore preto e vermelho
     insere(filho);
   }
+
+
+  cout << endl << endl;
 }
 
 // Caso 01
 // Se for raiz troca a cor do no inserido
 void insere(Node *temp){
-
+  cout << "Caso 01" << endl;
   void caso_2(Node *temp);
 
   if(temp->parent == NULL) temp->color = black;
@@ -59,6 +63,8 @@ void insere(Node *temp){
 // Se o pai for preto não faz nada
 // Caso contrario confere se é outro dos casos
 void caso_2(Node *temp){
+  cout << "Caso 02" << endl;
+
   void caso_3(Node *temp);
 
   Node *pai = temp->parent;
@@ -70,6 +76,7 @@ void caso_2(Node *temp){
 // Caso onde o pai e o tio são vermelhos
 // Caso contrario confere se é outro dos casos
 void caso_3(Node *temp){
+  cout << "Caso 03" << endl;
   void caso_4(Node *temp);
 
   Node *avo = temp->parent->parent;
@@ -91,6 +98,7 @@ void caso_3(Node *temp){
 // Se for interno transforma no caso 5 (pai vermelho e tio preto, no externo)
 //com a rotação, e independente deste caso vai para o caso 5
 void caso_4(Node *temp){
+  cout << "Caso 04" << endl;
   void caso_5(Node *temp);
 
   Node *pai = temp->parent;
@@ -122,6 +130,8 @@ void caso_4(Node *temp){
 void caso_5(Node *temp){
   Node *avo = temp->parent->parent;
   Node *pai = temp->parent;
+
+  cout << "Caso 05" << endl;
 
   if(temp == pai->left && pai == avo->left){
     if(pai->color == red){

@@ -13,6 +13,9 @@ int main() {
     arvore.insert(5);
     arvore.insert(6);
     arvore.insert(7);
+    arvore.insert(9);
+    arvore.insert(23);
+    arvore.insert(15);
 
     arvore.print_preorder();
     cout << "--\n";
@@ -23,6 +26,9 @@ int main() {
 
     cout << "Tamanho = " << arvore.size() << endl;
     cout << "Altura  = " << arvore.black_height() << endl;
+
+    cout << "--\n" << endl;
+
     if (arvore.find(42)) cout << 17 << " encontrado!\n";
     if (arvore.find(63)) cout << 63 << " encontrado!\n";
     if (arvore.find( 8)) cout <<  8 << " encontrado!\n";
